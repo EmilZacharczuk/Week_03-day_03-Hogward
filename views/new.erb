@@ -1,0 +1,27 @@
+<!-- Codeclan Week 04 Day 03
+RESTful Routes class
+Returning to the pizza shop
+
+Note that multiple lines need multiple ice cream cones
+Note that input name references Ruby variable names
+Note that drop down has select & options rather than input
+name attribute should match what is expected in hash or won't match input
+ -->
+
+
+ <form method='post' action='/'>
+   <label for='first-name'>First Name:</label>
+   <input id='first-name' type='text' name='first_name'/>
+   <label for='second-name'>Second Name:</label>
+   <input id='second-name' type='text' name='second_name'/>
+   <label for='age'>Age:</label>
+   <input id='age' type='number' name='age'/>
+   <label for='house-select'>Select a House:</label>
+   <select id='house-select' name='house'>
+     <option value='Slythering'>Slythering</option>
+     <option value='Gryffindor'>Gryffindor</option>
+     <option value='Ravenclaw'>Ravenclaw</option>
+     <option value='Hufflepuff'>Hufflepuff</option>
+   </select>
+   <input type='submit' value='Create Student'/>
+ </form>
