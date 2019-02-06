@@ -6,20 +6,25 @@ require_relative('./models/student.rb')
 also_reload('./models/*')
 
 get '/' do
-erb(:index)
+  erb(:index)
 end
 
-get '/all-students' do
+get '/all-students' do #index
   @students = Student.all()
-erb(:index)
+  erb(:index)
 end
 
-get '/new' do
-erb(:new)
+get '/new' do #new
+  erb(:new)
 end
 
-post '/' do #Why does redirect to / not work?
+get '/:id' do #show
+  @student = Student.find (params[:id])
+  erb(:show)
+end
+
+post '/' do #create
   @student = Student.new(params)
   @student.save
-redirect to '/all-students'
+  erb(:created)
 end

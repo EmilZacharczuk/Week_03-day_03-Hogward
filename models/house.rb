@@ -11,7 +11,7 @@ class House
 
 def initialize(options)
   @id = options['id'].to_i
-@house_name = options['house_name']
+  @house_name = options['house_name']
 end
 
 def save
