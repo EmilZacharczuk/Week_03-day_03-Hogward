@@ -5,7 +5,7 @@ Student.delete_all()
 House.delete_all()
 
 house_1 = House.new({
-  'house_name' => 'Slytherin'
+  'house_name' => 'Slythering'
   })
 
 house_2 = House.new({
@@ -40,5 +40,20 @@ student2 = Student.new({
   "age" => 14
 })
 
+student3 = Student.new({
+  "first_name" => "Hermione",
+  "second_name" => "Granger",
+  "house" => house_1.id,
+  "age" => 24
+  })
+
+student4 = Student.new({
+  "first_name" => "Gilderoy",
+  "second_name" => "Lockhart",
+  "house" => house_3.id,
+  "age" => 5
+  })
 student1.save
 student2.save
+student3.save
+student4.save
